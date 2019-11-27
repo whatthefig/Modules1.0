@@ -1,6 +1,6 @@
 <h1>Практическая работа № 11</h1>
 
-https://github.com/whatthefig/Modules1.0
+https://whatthefig.github.io/Modules1.0/
 
 v0.0.2
 
