@@ -253,7 +253,7 @@ editFormContainer.addEventListener('submit', function() {
 });
 
 addFormContainer.addEventListener('submit', function(){
-  arr=[];
+  const arr=[];
   const newCardList = new CardList(cardList, arr);
   event.preventDefault();
   newCardList.addCard(formNew.elements.name.value, formNew.elements.link.value, "0");
@@ -314,42 +314,3 @@ function validate(element) {
 function handleValidate (event) {
   validate(event.target);
 }
-
-
-/**
- * Не удаляйте мой комментарий
- *  
- * В классе не должно быть управление и изменение DOM
- * 
- * Вот такое надо удалять
- *         document.querySelector('.user-info__photo').style.backgroundImage = `url(${data.avatar})`;
-        document.querySelector('.user-info__name').textContent = data.name;
-        document.querySelector('.user-info__job').textContent = data.about;
- * 
- * Класс должен вызываться из других классов а результат того что получил передавать на метос вызова
- * 
- * При изменении профиля данные надо записывать только те которые пришли с сервера.
- * 
- * 
- * Вот это надо передавать при инициализации
- * http://95.216.175.5/cohort4
- * '369d404c-a749-4f02-b687-51fa39461b61'
- * 
- * В методах должен присутствовать catch
- * 
- * Необходимо вынести за класс 'cf687c2a74bfa663cda08b81' 
- * 
- * Можно лучше. То что находится в addEventListener необходимо вынести в отдельный метод класса
- * Вы в будущем можете переиспользовать эти методы по необходимости
- *
- * 
- * Можно лучше: обычно названия, для примера 'Должно быть от 2 до 30 символов' 
- * выносят в отдельный объект. Допустим может появится задача сделать многоязычный сайт
- * Для примера : const lang = { validationLenght: 'Должно быть от 2 до 30 символов' } 
- * 
- * Можно лучше. Не очень хорошая идея создавать виртуальный DOM при создании карточки, используйте лучше шаблон. 
- * Для примера можете посмотреть здесь https://wesbos.com/template-strings-html/
- * 
- * Работу отправляйте только после того как исправите все замечания. 
- * 
- */
